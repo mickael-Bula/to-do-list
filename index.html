@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Mickaël Bula">
+        <meta name="description" content="Une simple to-do list avec persistence des données dans le localStorage.">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./assets/css/todoList.css">
@@ -12,15 +14,17 @@
     </head>
     <body>
         <div id="myDIV" class="header">
-            <h2>To-do List</h2>
-            <h3>avec persistance des donnés dans le localStorage</h3>
-            <form id="form">
-                <input type="text" id="myInput" placeholder="Titre...">
+            <h1 class="title">To-do List</h1>
+            <h3 class="subtitle">avec persistance des donnés dans le localStorage</h3>
+            <form id="form" class="form">
+                <input type="text" class="input" id="myInput" placeholder="Titre...">
+                <button class="addBtn">Ajouter</button>
             </form>
-            <span class="addBtn">Ajouter</span>
         </div>        
-        <ul id="myUL" class="tasks">
-        </ul>
+        <div class="list-container">
+            <ul id="myUL" class="tasks">
+            </ul>
+        </div>
         <footer id="contact" class="contact">
             <ul class="contact__social-icons">
             <li class="icon"><a href="https://www.linkedin.com/in/mickael-bula/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
