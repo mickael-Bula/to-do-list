@@ -28,7 +28,7 @@ body {
   .task {
     cursor: pointer;
     position: relative;
-    padding: 1em .5em;
+    padding: 1em 1em 1em 2em;
     list-style-type: none;
     background: #eee;
     font-size: 1.2em;
@@ -62,14 +62,14 @@ body {
   .task.checked::before {
     content: '';
     position: absolute;
-    border-color: #fff;
+    border-color: rgb(121, 236, 159);
     border-style: solid;
     border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
+    top: .8em;
+    left: .6em;
     transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
+    height: 1em;
+    width: .5em;
   }
   
   /* Style the close button 
@@ -141,6 +141,9 @@ body {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0e0e0 #8a8a8a #8a8a8a #e0e0e0;
   }
   
   .addBtn:hover {
