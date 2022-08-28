@@ -9,7 +9,6 @@ const app = {
       app.displayListElement(task);
     }
 
-    document.querySelector(".addBtn").addEventListener("click", app.newElement);
     document
       .getElementById("form")
       .addEventListener("submit", app.handleSubmit);
@@ -49,26 +48,27 @@ const app = {
     });
   },
 
-  // Création d'un nouvel élément au clic sur le bouton "Ajouter"
+  // Création d'un nouvel élément
   newElement: function () {
     const li = document.createElement("LI");
-    li.className = "task";
     const inputValue = document.getElementById("myInput").value;
-    const content = document.createTextNode(inputValue);
-    li.appendChild(content);
+    document.getElementById("myInput").value = "";
+    console.log(inputValue);
     if (inputValue === "") {
       alert("Veuillez saisir une tâche");
-    } else {
-      document.getElementById("myUL").appendChild(li);
-      const task = { content: inputValue };
-      // Récupération de l'id retourné par storage.create et insertion dans le DOM
-      li.id = app.storage.create(task);
+      return;
     }
-    document.getElementById("myInput").value = "";
+    li.className = "task";
+    const content = document.createTextNode(inputValue);
+    li.appendChild(content);
+    document.getElementById("myUL").appendChild(li);
+    const task = { content: inputValue };
+    // Récupération de l'id retourné par storage.create et insertion dans le DOM
+    li.id = app.storage.create(task);
     app.addCloseBtn(li);
   },
 
-  // Ajout d'une nouvelle tâche lorsque la touche Entrée est pressée
+  // Ajout d'une nouvelle tâche à la soumission du formulaire
   handleSubmit: function (event) {
     event.preventDefault();
     app.newElement();
