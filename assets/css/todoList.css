@@ -5,6 +5,7 @@
   font-size: 11px;
 }
 
+/* déclaration de la hauteur de l'élément racine pour occuper tout l'espace disponible */
 html {
   height: 100vh;
 }
