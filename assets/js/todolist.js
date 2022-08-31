@@ -78,3 +78,4 @@ const app = {
 document.addEventListener("DOMContentLoaded", app.init);
 
 // TODO : ajouter une propriété isChecked pour gérer l'état de chaque tâche
+// TODO : remplacer la fenêtre Alert par un overlay : https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_overlay

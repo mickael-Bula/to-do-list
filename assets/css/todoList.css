@@ -5,7 +5,12 @@
   font-size: 11px;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
     margin: 0;
     min-width: 360px;
     font-family: 'Roboto', sans-serif;
@@ -155,16 +160,25 @@ body {
     transition: 0.3s;
   }
 
+  /* FOOTER
+  ------------------------------ */
+  /*
+  J'assigne une hauteur de 100vh au footer et je le déclare sticky pour qu'il apparaisse collé au bas de page.
+  Si la première règle semble placer le footer hors du viewport, la seconde vient l'ajuster en le remontant.
+  Grâce à cet artifice, le footer est toujours placé et visible au bas de page sans se superposer au contenu quand la hauteur est contrainte.
+  NOTE : permet de corriger ladite superposition sur mobile quand la saisie de l'utilisateur fait apparaître le clavier virtuel.
+  */
   .contact {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position: sticky;
+    top: 100vh;
+    min-width: 100%;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 0;
   }
   
   .contact__social-icons {
-    margin-top: 50px;
+    margin-top: 4.5rem;
+    padding: 0;
   }
   
   .icon {
