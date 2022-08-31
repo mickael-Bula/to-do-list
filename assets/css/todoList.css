@@ -183,7 +183,7 @@ body {
   
   .icon {
     display: inline-block;
-    margin: 0 16px;
+    margin: 0 1rem;
   }
   
   .icon a {
@@ -192,7 +192,7 @@ body {
   
   .icon i {
     color: #c3c3cb;
-    font-size: 34px;
+    font-size: 2rem;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
